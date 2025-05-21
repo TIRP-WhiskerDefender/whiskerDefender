@@ -107,7 +107,7 @@ export default {
       this.isLoading.topScans = true;
       this.errors.topScans = null;
       try {
-        const response = await fetch('http://localhost:5000/api/admin/top-scans');
+        const response = await fetch('https://whiskerdefender-api.onrender.com/api/admin/top-scans');
         if (!response.ok) {
           const errorData = await response.json().catch(() => ({ detail: 'Server error fetching top scans' }));
           throw new Error(errorData.detail || `HTTP error! Status: ${response.status}`);
