@@ -98,7 +98,7 @@ export default {
       formData.append('file', this.uploadedFile);
 
       try {
-        const response = await fetch('http://localhost:5000/scan', {
+        const response = await fetch('https://whiskerdefender-api.onrender.com/scan', {
           method: 'POST',
           body: formData,
         });
